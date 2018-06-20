@@ -67,7 +67,8 @@ func main() {
 
 	// Accept the contract on the second node
 	fmt.Println("Accepting the contract on the other peer...")
-	acceptContract()
+	err = acceptContract()
+	handleError(err)
 
 	// Wait for the contract to be activated
 	fmt.Println("Waiting for the contract to be activated...")
